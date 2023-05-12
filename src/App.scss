@@ -1,38 +1,161 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+
+
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f5f5f5;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.form-group {
   display: flex;
   flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  margin-bottom: 10px;
+}
+
+.form-group input[type='text'] {
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid #ddd;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.form-group input[type='submit'] {
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  background-color: #4caf50;
+  color: #fff;
+  cursor: pointer;
+}
+
+.form-group input[type='submit']:hover {
+  background-color: #3e8e41;
+}
+
+.checkbox-group {
+  display: flex;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin-bottom: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+.checkbox-group label {
+  margin-right: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.guest-list {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  color: #f44336;
+}
+.guest {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #f5f5f5;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.guest.attending {
+  background-color: #e0f2f1;
+}
+
+.guest.not-attending {
+  background-color: #ffebee;
+}
+
+.guest .guestName {
+  display: flex;
+  align-items: center;
+}
+
+.guest .guestName p {
+  margin: 0;
+  font-weight: bold;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.guest .guestName p:hover {
+  text-decoration: underline;
+}
+
+.guest .guestName button {
+  font-size: 16px;
+  padding: 5px;
+  margin-left: 10px;
+  border: none;
+  background-color: transparent;
+  color: #999;
+  cursor: pointer;
+}
+
+.guest .guestName button:hover {
+  color: #333;
+}
+
+.guest .actions {
+  display: flex;
+  align-items: center;
+}
+
+.guest .actions button {
+  font-size: 16px;
+  padding: 5px;
+  margin-left: 10px;
+  border: none;
+  background-color: transparent;
+  color: #999;
+  cursor: pointer;
+}
+
+.guest .actions button:hover {
+  color: #333;
+}
+
+.guest .actions button.delete {
+  color: #f44336;
+}
+
+.guest .actions button.delete:hover {
+  color: #c62828;
+}
+
+.guest .actions button.check {
+  color: #4caf50;
+}
+
+.guest .actions button.check:hover {
+  color: #388e3c;
+}
+
+.guest .actions button.undo {
+  color: #ffc107;
+}
+
+.guest .actions button.undo:hover {
+  color: #f57f17;
+}
+
+.error {
+  color: red;
+  margin-bottom: 10px;
 }
