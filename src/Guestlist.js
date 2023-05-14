@@ -265,7 +265,7 @@ export default function Guestlist() {
           </button>
         </div>
 
-      { /* if not filled out, show error message */ }
+        {/* if not filled out, show error message */}
 
         <div className="addGuest">
           <div className={hasError ? 'error inputs' : 'inputs'}>
@@ -325,6 +325,5 @@ export default function Guestlist() {
         </div>
       </div>
     </div>
-
   );
 }
