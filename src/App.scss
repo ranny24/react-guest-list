@@ -1,161 +1,212 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto');
+// import google font
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Playfair+Display:ital@1&display=swap" rel="stylesheet');
 
+// define sass variables
+$colorDark: #131212;
 
+$colorRed: #b5a19480;
+$colorWhite: #ffffff0f;
+$backgroundColor: #f5ace395;
 
+$thin: 2px;
+
+$spaceXS: 4px;
+$spaceS: 8px;
+
+$spaceM: 24px;
+$spaceL: 48px;
+
+// set global styles
 body {
-  font-family: 'Roboto', sans-serif;
+  box-sizing: border-box;
   margin: 0;
-  padding: 0;
+  font-family: 'Josefin Sans', 'Trebuchet MS', 'Helvetica', sans-serif;
+  color: $colorDark;
+  background-image: url('./weddingflower.jpg');
+  background-size: cover;
+  background-attachment: fixed;
 }
 
-.container {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 20px;
-  background-color: #f5f5f5;
-}
-
-.form-group {
+// define mixins here:
+@mixin flexCol($align: center) {
   display: flex;
   flex-direction: column;
-  margin-bottom: 20px;
+  align-items: $align;
 }
 
-.form-group label {
-  margin-bottom: 10px;
+// center everything
+.display {
+  @include flexCol();
+  font-size: 1.2rem;
+  margin: $spaceM;
+  h1 {
+    background-color: $backgroundColor;
+    backdrop-filter: blur($spaceXS);
+    padding: $spaceS;
+    border-radius: $spaceS;
+  }
+  .credit {
+    font-size: 0.6rem;
+    writing-mode: vertical-rl;
+    position: fixed;
+    top: 65%;
+    left: 95%;
+    @media screen and (max-width: 700px) {
+      position: inherit;
+      writing-mode: horizontal-tb;
+      margin-top: 20px;
+    }
+  }
 }
 
-.form-group input[type='text'] {
-  padding: 10px;
-  font-size: 16px;
-  border: 2px solid #ddd;
-  border-radius: 4px;
-  margin-bottom: 10px;
+// define how the content displays
+.content {
+  @include flexCol(stretch);
+  border-radius: $spaceS;
+  box-shadow: 0 0 $spaceM $backgroundColor;
+  background-color: $backgroundColor;
+  backdrop-filter: blur($spaceXS);
+  max-width: 768px;
+  width: 70vw;
+  @media screen and (max-width: 700px) {
+    width: 95vw;
+  }
+  button {
+    cursor: pointer;
+    border-radius: $spaceXS;
+    margin: $spaceS;
+    padding: $spaceS;
+    font-family: 'Josefin Sans', 'Trebuchet MS', 'Helvetica', sans-serif;
+    box-shadow: 0 0 $thin $colorWhite;
+    background-color: transparent;
+    border: $thin solid $backgroundColor;
+    &:hover {
+      border: 1px solid $backgroundColor;
+      background-color: $colorWhite;
+    }
+  }
 }
 
-.form-group input[type='submit'] {
-  padding: 10px;
-  font-size: 16px;
-  border: none;
-  border-radius: 4px;
-  background-color: #4caf50;
-  color: #fff;
-  cursor: pointer;
+.list {
+  margin: $spaceM;
+  margin-bottom: 0;
 }
 
-.form-group input[type='submit']:hover {
-  background-color: #3e8e41;
-}
-
-.checkbox-group {
-  display: flex;
-  align-items: center;
-  margin-bottom: 20px;
-}
-
-.checkbox-group label {
-  margin-right: 10px;
-}
-
-.guest-list {
-  margin-top: 20px;
-  display: flex;
-  flex-direction: column;
-  color: #f44336;
-}
+// define the the styles for each individual guest line
 .guest {
+  display: grid;
+  grid-template-columns: 2fr 2fr 1fr;
+  border-radius: $spaceS;
+  margin: $spaceS;
+  padding: 0 $spaceS;
+  background-color: $colorWhite;
+  backdrop-filter: opacity(0.2);
+  @media screen and (max-width: 400px) {
+    grid-template-columns: 1fr;
+  }
+  p {
+    display: inline-flex;
+    font-size: 1.5rem;
+    align-items: center;
+    // padding: $spaceS 0;
+  }
+  .guestName {
+    font-variant: small-caps;
+    font-weight: 500;
+  }
+  .editNames {
+    max-width: min-content;
+    box-shadow: none;
+    border: none;
+    color: $colorDark;
+    opacity: 0.4;
+    margin: 0;
+    margin-right: $spaceS;
+    padding: 0;
+    transform: rotate(90deg) translate(-15px, -3px);
+    &:hover {
+      border: none;
+    }
+  }
+  .status {
+    display: flex;
+    align-items: center;
+  }
+  button {
+    width: min-content;
+    height: min-content;
+    align-self: center;
+    justify-self: flex-end;
+    color: $colorDark;
+  }
+}
+
+// filter buttons
+.filters {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px;
-  background-color: #f5f5f5;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  margin-bottom: 10px;
+  justify-content: flex-end;
+  margin: $spaceM;
+  margin-top: 0;
+  .active {
+    background-color: $colorWhite;
+    border: $thin solid transparent;
+  }
 }
 
-.guest.attending {
-  background-color: #e0f2f1;
-}
-
-.guest.not-attending {
-  background-color: #ffebee;
-}
-
-.guest .guestName {
+.addGuest {
   display: flex;
-  align-items: center;
+  justify-content: center;
+  font-size: $spaceM;
 }
 
-.guest .guestName p {
-  margin: 0;
-  font-weight: bold;
-  font-size: 18px;
-  cursor: pointer;
+// input fields
+.inputs {
+  @include flexCol(flex-start);
+  margin: $spaceS;
+  label {
+    margin: $spaceS;
+  }
+  input {
+    margin-left: $spaceS;
+    background-color: transparent;
+  }
 }
 
-.guest .guestName p:hover {
-  text-decoration: underline;
-}
-
-.guest .guestName button {
-  font-size: 16px;
-  padding: 5px;
-  margin-left: 10px;
-  border: none;
-  background-color: transparent;
-  color: #999;
-  cursor: pointer;
-}
-
-.guest .guestName button:hover {
-  color: #333;
-}
-
-.guest .actions {
-  display: flex;
-  align-items: center;
-}
-
-.guest .actions button {
-  font-size: 16px;
-  padding: 5px;
-  margin-left: 10px;
-  border: none;
-  background-color: transparent;
-  color: #999;
-  cursor: pointer;
-}
-
-.guest .actions button:hover {
-  color: #333;
-}
-
-.guest .actions button.delete {
-  color: #f44336;
-}
-
-.guest .actions button.delete:hover {
-  color: #c62828;
-}
-
-.guest .actions button.check {
-  color: #4caf50;
-}
-
-.guest .actions button.check:hover {
-  color: #388e3c;
-}
-
-.guest .actions button.undo {
-  color: #ffc107;
-}
-
-.guest .actions button.undo:hover {
-  color: #f57f17;
-}
-
+// make error visible
 .error {
-  color: red;
-  margin-bottom: 10px;
+  border: $spaceXS solid $colorRed;
+  border-radius: $spaceXS;
+  p {
+    padding: $spaceXS;
+    font-size: 1rem;
+  }
+}
+
+//  addGuest button
+.buttons {
+  margin: $spaceS;
+
+  .add {
+    margin: $spaceS;
+    padding: $spaceM;
+    font-size: 1.5rem;
+    color: $colorLight;
+  }
+}
+
+// deleteAll button
+.deleteAll {
+  display: flex;
+  margin: $spaceM;
+  margin-top: $spaceL;
+  justify-content: flex-end;
+  .delete {
+    height: min-content;
+    width: min-content;
+    white-space: nowrap;
+    &:hover {
+      background-color: $colorRed;
+      border: $thin solid $colorWhite;
+    }
+  }
 }

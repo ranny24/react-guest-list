@@ -2,11 +2,12 @@
   "name": "react-guest-list",
   "version": "0.1.0",
   "private": true,
-  "main": "src/App.js",
+  "main": "src/index.js",
   "dependencies": {
     "@upleveled/react-scripts": "5.0.11",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-guest-list": "link:",
     "sass": "^1.62.1",
     "sharp": "^0.32.1"
   },

@@ -161,7 +161,7 @@ export default function Guestlist() {
             onClick={() => handleUpdateFirstName(guest.id)}
             aria-label="Edit the first name"
           >
-            ✎
+            ✐
           </button>
           <p
             onDoubleClick={() => handleUpdateLastName(guest.id)}
@@ -175,7 +175,7 @@ export default function Guestlist() {
             onClick={() => handleUpdateFirstName(guest.id)}
             aria-label="Edit the first name"
           >
-            ✎
+            ✐
           </button>
         </div>
         <div className="status">
@@ -208,7 +208,7 @@ export default function Guestlist() {
 
   return (
     <div className="display">
-      <h1>Guestlist</h1>
+      <h1>Wedding Guestlist</h1>
       <div className="content">
         <div className="list">
           {isLoading ? (
@@ -264,6 +264,8 @@ export default function Guestlist() {
             Show all guests
           </button>
         </div>
+
+      { /* if not filled out, show error message */ }
 
         <div className="addGuest">
           <div className={hasError ? 'error inputs' : 'inputs'}>

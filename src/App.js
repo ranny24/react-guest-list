@@ -4,7 +4,7 @@ import Guestlist from './Guestlist';
 function App() {
   return (
     <div>
-      <h1 className={styles.heading}>Guest List</h1>
+      <h1 className={styles}>Guest List</h1>
       <Guestlist />
     </div>
   );
