@@ -190,7 +190,7 @@ export default function Guestlist() {
                 );
               }}
             />
-            {guest.attending ? 'Attending' : 'Not attending'}
+            {guest.attending ? 'Attending 🥳' : 'Not attending'}
           </label>
         </div>
         <button
@@ -215,10 +215,7 @@ export default function Guestlist() {
             'Loading...'
           ) : guestList.length === 0 ? (
             <p>
-              <i>
-                Use the input fields below to begin keeping track of your
-                guestlist
-              </i>
+              <i>Use the input fields below to create your guest list !</i>
             </p>
           ) : (
             guestList
@@ -241,7 +238,7 @@ export default function Guestlist() {
               setNotAttendingOnly(false);
             }}
           >
-            Show attending only
+            Show attending list
           </button>
           <button
             className={notAttendingOnly ? 'active' : 'inactive'}
@@ -250,7 +247,7 @@ export default function Guestlist() {
               setAttendingOnly(false);
             }}
           >
-            Show not attending only
+            Show not attending list
           </button>
           <button
             className={
@@ -273,7 +270,7 @@ export default function Guestlist() {
               <p>Please submit both a first name and a last name!</p>
             ) : null}
             <label>
-              First name:
+              🌺 First name:
               <input
                 disabled={isLoading ? 'disabled' : false}
                 onChange={(event) => setFirstName(event.target.value)}
@@ -287,7 +284,7 @@ export default function Guestlist() {
               />
             </label>
             <label>
-              Last name:
+              🌺 Last name:
               <input
                 disabled={isLoading ? 'disabled' : false}
                 onChange={(event) => setLastName(event.target.value)}

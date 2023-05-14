@@ -46,7 +46,6 @@ body {
     backdrop-filter: blur($spaceXS);
     padding: $spaceS;
     border-radius: $spaceS;
-
   }
   .credit {
     font-size: 0.6rem;
@@ -76,7 +75,7 @@ body {
   }
   button {
     cursor: pointer;
-    border-radius: $spaceXS;
+    border-radius: 10px 100px / 120px;
     margin: $spaceS;
     padding: $spaceS;
     font-family: 'Josefin Sans', 'Trebuchet MS', 'Helvetica', sans-serif;
@@ -94,7 +93,7 @@ body {
   margin: $spaceM;
   margin-bottom: 1rem;
   border-block: solid;
-  border-color: rgb(180, 103, 103);
+  border-color: #b46767;
 }
 
 // define the the styles for each individual guest line
@@ -113,13 +112,11 @@ body {
     display: inline-flex;
     font-size: 1.5rem;
     align-items: center;
-    // padding: $spaceS 0;
+    padding: $spaceS 0;
   }
   .guestName {
     font-variant: small-caps;
     font-weight: 500;
-
-
   }
   .editNames {
     max-width: min-content;
@@ -164,6 +161,8 @@ body {
   display: flex;
   justify-content: center;
   font-size: $spaceM;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+    'Lucida Sans', Arial, sans-serif;
 }
 
 // input fields
