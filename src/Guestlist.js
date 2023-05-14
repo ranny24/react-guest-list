@@ -325,5 +325,6 @@ export default function Guestlist() {
         </div>
       </div>
     </div>
+
   );
 }

@@ -4,6 +4,9 @@ dependencies:
   '@upleveled/react-scripts':
     specifier: 5.0.11
     version: 5.0.11(eslint@8.40.0)(react@18.2.0)(sass@1.62.1)(typescript@5.0.4)
+  canvas-confetti:
+    specifier: ^1.6.0
+    version: 1.6.0
   react:
     specifier: ^18.2.0
     version: 18.2.0
@@ -3532,6 +3535,10 @@ packages:
 
   /caniuse-lite@1.0.30001486:
     resolution: {integrity: sha512-uv7/gXuHi10Whlj0pp5q/tsK/32J2QSqVRKQhs2j8VsDCjgyruAh/eEXHF822VqO9yT6iZKw3nRwZRSPBE9OQg==}
+
+  /canvas-confetti@1.6.0:
+    resolution: {integrity: sha512-ej+w/m8Jzpv9Z7W7uJZer14Ke8P2ogsjg4ZMGIuq4iqUOqY2Jq8BNW42iGmNfRwREaaEfFIczLuZZiEVSYNHAA==}
+    dev: false
 
   /case-sensitive-paths-webpack-plugin@2.4.0:
     resolution: {integrity: sha512-roIFONhcxog0JSSWbvVAh3OocukmSgpqOH6YpMkCvav/ySIV3JKg4Dc8vYtQjYi/UxpNE36r/9v+VqTQqgkYmw==}

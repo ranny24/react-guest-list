@@ -5,6 +5,7 @@
   "main": "src/index.js",
   "dependencies": {
     "@upleveled/react-scripts": "5.0.11",
+    "canvas-confetti": "^1.6.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-guest-list": "link:",

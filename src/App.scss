@@ -6,7 +6,7 @@ $colorDark: #131212;
 
 $colorRed: #b5a19480;
 $colorWhite: #ffffff0f;
-$backgroundColor: #f5ace395;
+$backgroundColor: #e4beaf95;
 
 $thin: 2px;
 
@@ -22,7 +22,7 @@ body {
   margin: 0;
   font-family: 'Josefin Sans', 'Trebuchet MS', 'Helvetica', sans-serif;
   color: $colorDark;
-  background-image: url('./weddingflower.jpg');
+  background-image: url('./weddingflowers.jpg');
   background-size: cover;
   background-attachment: fixed;
 }
@@ -40,10 +40,13 @@ body {
   font-size: 1.2rem;
   margin: $spaceM;
   h1 {
+    font-family: italic;
+    color: #af7838;
     background-color: $backgroundColor;
     backdrop-filter: blur($spaceXS);
     padding: $spaceS;
     border-radius: $spaceS;
+
   }
   .credit {
     font-size: 0.6rem;
@@ -89,7 +92,9 @@ body {
 
 .list {
   margin: $spaceM;
-  margin-bottom: 0;
+  margin-bottom: 1rem;
+  border-block: solid;
+  border-color: rgb(180, 103, 103);
 }
 
 // define the the styles for each individual guest line
@@ -113,6 +118,8 @@ body {
   .guestName {
     font-variant: small-caps;
     font-weight: 500;
+
+
   }
   .editNames {
     max-width: min-content;
@@ -125,7 +132,7 @@ body {
     padding: 0;
     transform: rotate(90deg) translate(-15px, -3px);
     &:hover {
-      border: none;
+      border: solid;
     }
   }
   .status {
@@ -179,6 +186,7 @@ body {
   p {
     padding: $spaceXS;
     font-size: 1rem;
+    color: red;
   }
 }
 
@@ -190,7 +198,7 @@ body {
     margin: $spaceS;
     padding: $spaceM;
     font-size: 1.5rem;
-    color: $colorLight;
+    color: $colorDark;
   }
 }
 
