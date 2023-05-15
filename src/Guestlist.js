@@ -12,7 +12,7 @@ export default function Guestlist() {
   const firstNameInputRef = useRef(null);
   const lastNameIsFocused = useRef(null);
 
-  const baseUrl = 'http://localhost:4000';
+  const baseUrl = 'http://d77e52ef-1e87-4919-85c5-bb0ce85427dc.id.repl.co/guests/';
 
   // Getting all guests (aka GET /guests)
   useEffect(() => {
