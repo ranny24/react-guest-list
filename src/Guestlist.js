@@ -272,7 +272,7 @@ export default function Guestlist() {
             <label>
               🌺 First name:
               <input
-                disabled={isLoading ? 'disabled' : false}
+                disabled={isLoading}
                 onChange={(event) => setFirstName(event.target.value)}
                 value={firstName}
                 ref={firstNameInputRef}
@@ -286,7 +286,7 @@ export default function Guestlist() {
             <label>
               🌺 Last name:
               <input
-                disabled={isLoading ? 'disabled' : false}
+                disabled={isLoading}
                 onChange={(event) => setLastName(event.target.value)}
                 value={lastName}
                 onKeyPress={(event) => {
