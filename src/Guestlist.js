@@ -18,7 +18,6 @@ export default function Guestlist() {
   // Getting all guests (aka GET /guests)
   useEffect(() => {
     async function getGuests() {
-      setIsLoading(true);
       const response = await fetch(`${baseUrl}/guests`);
       const allGuests = await response.json();
       setGuestList([...allGuests]);
